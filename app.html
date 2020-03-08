@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<title>Sequence Guesser</title>
+	<link rel="stylesheet" href="app.css" />
+	<script src="./html-compo.min.js"></script>
+</head>
+<body>
+	<br/>
+	<div id="app">
+		<div class="title">Sequence Guesser</div>
+		<div class='info working'>
+			I made an app, which uses Machine learning to recognize the next element of the pattern.
+			Lets see a demo how to use it...
+		</div>
+		<br/><br/>
+		<div class='task working'>
+			<pattern-container ref="patterns">
+				<pattern-elem value="5"></pattern-elem>
+				<pattern-elem value="12"></pattern-elem>
+				<pattern-elem value="26"></pattern-elem>
+				<pattern-elem value="54"></pattern-elem>
+			</pattern-container>
+			<button id="add-p-element" class="addrembtn">+</button>
+			<button id="remove-p-element" class="addrembtn">-</button>
+		</div>
+		<br/><br/>
+		<div class="calc-btn">
+			<button id="calculate">Calculate</button>
+		</div>
+		<br/><br/>
+		<div class="working output" id="output">
+			The output will appear here
+		</div>
+	</div>
+	<html-components>
+		<pattern-elem compo-attrs="value">
+			<input type="number" class="pattern-elem" value="@{value}">
+		</pattern-elem>
+		<pattern-container>
+			@{self.data}
+		</pattern-container>
+	</html-components>
+	<script type='module' src="./app.js"></script>
+</body>
+</html>
