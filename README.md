@@ -3,4 +3,4 @@ Machine Learning based Number Sequence Guessing Library
 
 Here's it
 
-https://sarthak-pokharel.git.io/SequenceGuesser
+https://sarthak-pokharel.github.io/SequenceGuesser
